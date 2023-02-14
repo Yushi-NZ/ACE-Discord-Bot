@@ -1,4 +1,4 @@
-const token = "NDAwNTc1ODkyMjEwMDU3MjM4.GJM9Ij.x8mHANoaJLxx7IUQyJwDmLsTKjWMjDLiLRl21o";
+
 const {Client, GatewayIntentBits} = require("discord.js");
 const client = new Client({
     intents:[
@@ -6,6 +6,9 @@ const client = new Client({
         GatewayIntentBits.GuildMessages
     ]
 });
+
+const config = require('./config.json');
+const token = config.token
 
 client.on("ready", () =>{
     console.log("The bot is online."); //message when bot is online
